@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Академия психотерапии — Обучение психологии</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header id="siteHeader">
+  <div class="header-inner">
+  <div class="logo">
+    <img src="images/logo.png" alt="Академия краткосрочной стратегической психотерапии">
+  </div>
+
+  <div class="header-right">
+  <nav>
+    <a href="#">Психолог с нуля</a>
+    <a href="#">Начать практиковать психологу</a>
+
+    <div class="nav-dd" id="ddPk">
+      <button class="nav-dd-btn" aria-expanded="false" aria-controls="ddPkPanel" onclick="toggleDD('ddPk')">
+        Повышение квалификации
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0D74D0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+      </button>
+      <div class="nav-dd-panel dd-pk" id="ddPkPanel">
+        <a href="#" class="dd-item">
+          <div class="t">Духовно-ориентированная психотерапия (ДДТ)</div>
+          <div class="s">Авторский метод глубокой психотерапии</div>
+        </a>
+        <a href="#" class="dd-item">
+          <div class="t">АВК-гипноз</div>
+          <div class="s">Эриксоновский гипноз для работы с бессознательным</div>
+        </a>
+        <a href="#" class="dd-item">
+          <div class="t">Телесно-ориентированная психотерапия (ИТОП)</div>
+          <div class="s">Работа с эмоциями и напряжением через тело</div>
+        </a>
+        <a href="#" class="dd-item">
+          <div class="t">ДПДГ (EMDR)</div>
+          <div class="s">Метод переработки травматических переживаний</div>
+        </a>
+        <a href="#" class="dd-item"><div class="t">Сексология в практической психологии</div></a>
+        <a href="#" class="dd-item"><div class="t">Групповая психотерапия</div></a>
+        <a href="#" class="dd-item"><div class="t">Метафорические ассоциативные карты (МАК)</div></a>
+        <a href="#" class="dd-item"><div class="t">Психомоторное развитие: диагностика и коррекция</div></a>
+        <a href="#" class="dd-item"><div class="t">Практикумы Масловского С.И.</div></a>
+      </div>
+    </div>
+
+    <div class="nav-dd" id="ddVm">
+      <button class="nav-dd-btn" aria-expanded="false" aria-controls="ddVmPanel" onclick="toggleDD('ddVm')">
+        Вспомогательные материалы
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0D74D0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+      </button>
+      <div class="nav-dd-panel dd-vm" id="ddVmPanel">
+        <div class="dd-group-label">Бесплатные</div>
+        <a href="#" class="dd-link">Блог</a>
+        <a href="#" class="dd-link">Стать студентом бесплатно</a>
+        <a href="#" class="dd-link">Интенсив для психологов</a>
+
+        <div class="dd-group-label">Платные</div>
+        <a href="#" class="dd-item">
+          <div class="t">Аудио-курс ДПДГ</div>
+          <div class="s">Курс для самостоятельной работы</div>
+        </a>
+        <a href="#" class="dd-item">
+          <div class="t">Аптечка самопомощи</div>
+          <div class="s">Короткие практики на каждый день</div>
+        </a>
+        <a href="#" class="dd-link">Стресс под контролем</a>
+        <a href="#" class="dd-link">Терапия участников СВО</a>
+        <a href="#" class="dd-link">Работа с травмой</a>
+        <a href="#" class="dd-link">Памятка для взрослых</a>
+        <a href="#" class="dd-link">База знаний</a>
+      </div>
+    </div>
+
+    <a href="#">О нас</a>
+    <a href="#">Новости</a>
+    <a href="#">Контакты</a>
+  </nav>
+
+  <button class="burger-btn" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileNav" onclick="toggleMobileNav()">
+    <span></span><span></span><span></span>
+  </button>
+  </div>
+  </div>
+</header>
+
+<div class="mobile-nav-backdrop" id="mobileNavBackdrop" onclick="toggleMobileNav()"></div>
+<nav class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <a href="#" class="mobile-nav-link">Психолог с нуля</a>
+  <a href="#" class="mobile-nav-link">Начать практиковать психологу</a>
+
+  <div class="mobile-nav-dd">
+    <button class="mobile-nav-dd-btn" aria-expanded="false" onclick="toggleMobileDD(this)">
+      Повышение квалификации
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0D74D0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+    </button>
+    <div class="mobile-nav-dd-panel">
+      <a href="#" class="dd-item">
+        <div class="t">Духовно-ориентированная психотерапия (ДДТ)</div>
+        <div class="s">Авторский метод глубокой психотерапии</div>
+      </a>
+      <a href="#" class="dd-item">
+        <div class="t">АВК-гипноз</div>
+        <div class="s">Эриксоновский гипноз для работы с бессознательным</div>
+      </a>
+      <a href="#" class="dd-item">
+        <div class="t">Телесно-ориентированная психотерапия (ИТОП)</div>
+        <div class="s">Работа с эмоциями и напряжением через тело</div>
+      </a>
+      <a href="#" class="dd-item">
+        <div class="t">ДПДГ (EMDR)</div>
+        <div class="s">Метод переработки травматических переживаний</div>
+      </a>
+      <a href="#" class="dd-item"><div class="t">Сексология в практической психологии</div></a>
+      <a href="#" class="dd-item"><div class="t">Групповая психотерапия</div></a>
+      <a href="#" class="dd-item"><div class="t">Метафорические ассоциативные карты (МАК)</div></a>
+      <a href="#" class="dd-item"><div class="t">Психомоторное развитие: диагностика и коррекция</div></a>
+      <a href="#" class="dd-item"><div class="t">Практикумы Масловского С.И.</div></a>
+    </div>
+  </div>
+
+  <div class="mobile-nav-dd">
+    <button class="mobile-nav-dd-btn" aria-expanded="false" onclick="toggleMobileDD(this)">
+      Вспомогательные материалы
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0D74D0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+    </button>
+    <div class="mobile-nav-dd-panel">
+      <div class="dd-group-label">Бесплатные</div>
+      <a href="#" class="dd-link">Блог</a>
+      <a href="#" class="dd-link">Стать студентом бесплатно</a>
+      <a href="#" class="dd-link">Интенсив для психологов</a>
+
+      <div class="dd-group-label">Платные</div>
+      <a href="#" class="dd-item">
+        <div class="t">Аудио-курс ДПДГ</div>
+        <div class="s">Курс для самостоятельной работы</div>
+      </a>
+      <a href="#" class="dd-item">
+        <div class="t">Аптечка самопомощи</div>
+        <div class="s">Короткие практики на каждый день</div>
+      </a>
+      <a href="#" class="dd-link">Стресс под контролем</a>
+      <a href="#" class="dd-link">Терапия участников СВО</a>
+      <a href="#" class="dd-link">Работа с травмой</a>
+      <a href="#" class="dd-link">Памятка для взрослых</a>
+      <a href="#" class="dd-link">База знаний</a>
+    </div>
+  </div>
+
+  <a href="#" class="mobile-nav-link">О нас</a>
+  <a href="#" class="mobile-nav-link">Новости</a>
+  <a href="#" class="mobile-nav-link">Контакты</a>
+</nav>
+
+<!-- ===== Экран 1: Hero ===== -->
+<section class="hero" data-screen-label="01 Hero">
+  <div class="hero-bg"></div>
+  <div class="hero-fade"></div>
+  <div class="hero-inner">
+    <span class="eyebrow">Профессиональная переподготовка и повышение квалификации</span>
+    <h1>Обучение психологии</h1>
+    <p class="lead">Для тех, кто делает первые шаги в профессии, практикующих психологов и специалистов помогающих профессий.</p>
+    <div class="cta-row">
+      <a href="#lead" class="btn-primary">Получить консультацию</a>
+      <a href="#programs" class="btn-secondary">Смотреть программы</a>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <img src="images/ic-online.png" alt="">
+        <span>Очно и онлайн</span>
+      </div>
+      <div class="feature">
+        <img src="images/ic-practice.png" alt="">
+        <span>Практика с первого дня</span>
+      </div>
+    </div>
+    <div class="diploma">
+      <img src="images/ic-diploma.png" alt="">
+      <div>
+        <div class="t">Диплом установленного образца</div>
+        <div class="s">С внесением в Государственный реестр (ФИС ФРДО)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Экран 2: Почему учатся у нас ===== -->
+<section class="section why-section" data-screen-label="02 Преимущества">
+  <div class="sec-head">
+    <span class="eyebrow">Преимущества обучения</span>
+    <h2>Почему учатся у нас</h2>
+  </div>
+
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">
+<img src="images/ic-why-practice.png" alt="">
+      </div>
+      <h3>Практика с первого дня</h3>
+      <ul class="why-list">
+        <li>Обучение без лишней теории — более 60% практики</li>
+        <li>Работа с реальными случаями и отработка навыков</li>
+        <li>Преподаватели — практикующие специалисты</li>
+        <li>Без возрастных ограничений</li>
+      </ul>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon">
+<img src="images/ic-why-methods.png" alt="">
+      </div>
+      <h3>Современные методы психотерапии</h3>
+      <ul class="why-list">
+        <li>Освойте востребованные направления терапии</li>
+        <li>КСП, гипноз, ДПДГ, телесный и другие подходы</li>
+        <li>Методы, которые применяются в реальной практике</li>
+        <li>Инструменты с быстрым результатом</li>
+      </ul>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon">
+<img src="images/ic-why-community.png" alt="">
+      </div>
+      <h3>Обучение в сильном сообществе</h3>
+      <ul class="why-list">
+        <li>Обучение в поддерживающей профессиональной среде</li>
+        <li>Личная терапия и сопровождение в процессе</li>
+        <li>Без оценок и давления — комфортное развитие</li>
+        <li>Сообщество специалистов и единомышленников</li>
+      </ul>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon">
+<img src="images/ic-why-psyche.png" alt="">
+      </div>
+      <h3>Глубокое понимание психики</h3>
+      <ul class="why-list">
+        <li>Разбираете причины, а не только симптомы</li>
+        <li>Понимаете поведение, эмоции и жизненные сценарии</li>
+        <li>Изучаете внутренние процессы и механизмы психики</li>
+        <li>Получаете системное видение человека</li>
+      </ul>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon">
+<img src="images/ic-why-flexible.png" alt="">
+      </div>
+      <h3>Гибкие условия обучения и оплаты</h3>
+      <ul class="why-list">
+        <li>Гибкий график — совмещайте с работой</li>
+        <li>Очный и онлайн формат обучения</li>
+        <li>Рассрочка без переплат</li>
+        <li>Система скидок для разных категорий</li>
+      </ul>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon">
+<img src="images/ic-why-income.png" alt="">
+      </div>
+      <h3>Доход после обучения</h3>
+      <ul class="why-list">
+        <li>Начнёте зарабатывать после получения диплома</li>
+        <li>Средний чек консультации 2 500 ₽</li>
+        <li>Даже 2 клиента в день дают стабильный доход</li>
+        <li>Окупаемость обучения — от 2 месяцев</li>
+      </ul>
+    </div>
+  </div>
+
+  <button class="why-cta">Бесплатная консультация</button>
+</section>
+
+<!-- ===== Экран 3: Направления подготовки ===== -->
+<section class="section" id="programs" data-screen-label="03 Программы">
+  <div class="sec-head">
+    <span class="eyebrow">Программы обучения</span>
+    <h2>Направления подготовки психологов</h2>
+    <p class="sec-sub">Выберите подходящую программу и перейдите к подробному описанию</p>
+  </div>
+
+  <div class="grid">
+    <article class="card">
+      <div class="card-photo">
+        <span class="card-badge">Идёт набор</span>
+        <image-slot id="prog-2" shape="rect" placeholder="Фото программы" src="images/practice-img-2.png"></image-slot>
+      </div>
+      <div class="card-body">
+        <div class="tags">
+          <span class="tag">Очно и онлайн</span>
+          <span class="tag">3 месяца</span>
+        </div>
+        <h3 class="card-title">Начать практиковать психологу</h3>
+        <button class="btn">Подробнее</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-photo"><image-slot id="prog-6" shape="rect" placeholder="Фото программы" src="images/mak-img-6.jpg"></image-slot></div>
+      <div class="card-body">
+        <div class="tags">
+          <span class="tag cert">Удостоверение · 104 ч.</span>
+          <span class="tag">Очно и онлайн</span>
+          <span class="tag">6 семинаров</span>
+        </div>
+        <h3 class="card-title">Метафорические ассоциативные карты</h3>
+        <p class="card-meta">Старт: 11.07.2026 г.</p>
+        <button class="btn">Подробнее</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-photo"><image-slot id="prog-3" shape="rect" placeholder="Фото программы" src="images/psychomotor-img-3.jpg"></image-slot></div>
+      <div class="card-body">
+        <div class="tags">
+          <span class="tag cert">Удостоверение · 200 ч.</span>
+          <span class="tag">Очно и онлайн</span>
+          <span class="tag">15 семинаров</span>
+        </div>
+        <h3 class="card-title">Психомоторное развитие: диагностика и коррекция в интегративном подходе</h3>
+        <p class="card-meta">Старт: 22.08.2026 г.</p>
+        <button class="btn">Подробнее</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-photo"><image-slot id="prog-5" shape="rect" placeholder="Фото программы" src="images/sexology-img-5.png"></image-slot></div>
+      <div class="card-body">
+        <div class="tags">
+          <span class="tag cert">Удостоверение · 27 ч.</span>
+          <span class="tag">Очно и онлайн</span>
+          <span class="tag">3 дня</span>
+        </div>
+        <h3 class="card-title">Сексология в практической психологии</h3>
+        <p class="card-meta">Старт: 05.09.2026 г.</p>
+        <button class="btn">Подробнее</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-photo"><image-slot id="prog-1" shape="rect" placeholder="Фото программы" src="images/profession-img-1.png"></image-slot></div>
+      <div class="card-body">
+        <div class="tags">
+          <span class="tag cert">Диплом</span>
+          <span class="tag">Очно и онлайн</span>
+          <span class="tag">7–13 месяцев</span>
+        </div>
+        <h3 class="card-title">Профессия «Практический психолог»</h3>
+        <p class="card-meta">Старт: 06.09.2026 г.</p>
+        <button class="btn">Подробнее</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-photo"><image-slot id="prog-4" shape="rect" placeholder="Фото программы" src="images/group-therapy-img-4.png"></image-slot></div>
+      <div class="card-body">
+        <div class="tags">
+          <span class="tag cert">Удостоверение · 80 ч.</span>
+          <span class="tag">Очно и онлайн</span>
+          <span class="tag">6 дней</span>
+        </div>
+        <h3 class="card-title">Групповая психотерапия: как создавать и проводить эффективные групповые программы</h3>
+        <p class="card-meta">Старт: 12.09.2026 г.</p>
+        <button class="btn">Подробнее</button>
+      </div>
+    </article>
+  </div>
+
+  <div class="featured">
+    <div class="featured-inner">
+      <div class="featured-photo"><image-slot id="founder" shape="rect" placeholder="Фото С.И. Масловского" src="images/founder-maslovsky.webp"></image-slot></div>
+      <div>
+        <h3>Курсы повышения квалификации</h3>
+        <p class="founder">сооснователя Академии Масловского С.И.</p>
+        <div class="course-grid">
+          <a href="#" class="course-item">
+            <span class="c-name">ДПДГ</span>
+            <svg class="course-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"></path></svg>
+          </a>
+          <a href="#" class="course-item">
+            <span class="c-name">АВК-гипноз</span>
+            <svg class="course-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"></path></svg>
+          </a>
+          <a href="#" class="course-item">
+            <span class="c-name">Духовно-ориентированная психотерапия</span>
+            <svg class="course-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"></path></svg>
+          </a>
+          <a href="#" class="course-item">
+            <span class="c-name">Телесно-ориентированная психотерапия</span>
+            <svg class="course-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Экран 4: Практикумы преподавателей ===== -->
+<section class="section" data-screen-label="04 Практикумы">
+  <div class="sec-head">
+    <span class="eyebrow">Дополнительное обучение</span>
+    <h2>Практикумы наших преподавателей</h2>
+  </div>
+
+  <div class="prac-grid">
+    <div class="prac-card">
+      <div class="prac-head">
+        <div class="prac-avatar">МЮ</div>
+        <p class="prac-author">Масловская Ю.В.</p>
+      </div>
+      <h3 class="prac-title">ПК Работа с семейными и системными сценариями в психологическом консультировании</h3>
+      <button class="btn">Подробнее</button>
+    </div>
+    <div class="prac-card">
+      <div class="prac-head">
+        <div class="prac-avatar">ДТ</div>
+        <p class="prac-author">Деминашвили Т.В.</p>
+      </div>
+      <h3 class="prac-title">МК «Как тревогу трансформировать в устойчивость»</h3>
+      <button class="btn">Подробнее</button>
+    </div>
+    <div class="prac-card">
+      <div class="prac-head">
+        <div class="prac-avatar">ПТ</div>
+        <p class="prac-author">Пинхаржевская Т.В.</p>
+      </div>
+      <h3 class="prac-title">Терапевтическая группа «Мастер взаимоотношений»</h3>
+      <button class="btn">Подробнее</button>
+    </div>
+    <div class="prac-card">
+      <div class="prac-head">
+        <div class="prac-avatar">КА</div>
+        <p class="prac-author">Круглова А.А.</p>
+      </div>
+      <h3 class="prac-title">Вебинар «Половое воспитание детей и подростков»</h3>
+      <button class="btn">Подробнее</button>
+    </div>
+  </div>
+
+  <div class="prac-featured">
+    <div class="prac-featured-photo"><image-slot id="prac-founder" shape="rect" placeholder="Фото С.И. Масловского" src="images/founder-maslovsky-2.jpg"></image-slot></div>
+    <div>
+      <h3>Однодневные практикумы сооснователя Академии Масловского С.И.</h3>
+      <div class="prac-links">
+        <a href="#" class="prac-link">
+          <p>Психотерапия рака. Работа с немотивированными клиентами</p>
+          <svg class="course-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"></path></svg>
+        </a>
+        <a href="#" class="prac-link">
+          <p>Работа с гневом и обидой в интегративном подходе</p>
+          <svg class="course-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"></path></svg>
+        </a>
+        <a href="#" class="prac-link">
+          <p>Работа со страхом смерти методами краткосрочной психотерапии</p>
+          <svg class="course-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"></path></svg>
+        </a>
+        <a href="#" class="prac-link">
+          <p>Причины и последствия гендерных конфликтов в роду, трансгенерация и методы психотерапии</p>
+          <svg class="course-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"></path></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Экран: Отзывы ===== -->
+<section class="section rev-section" data-screen-label="05 Отзывы">
+  <div class="sec-head">
+    <span class="eyebrow">Отзывы</span>
+    <h2>Что говорят о нас студенты и клиенты</h2>
+    <p class="sec-sub">Реальные отзывы об обучении и практике</p>
+  </div>
+
+  <div class="rev-grid">
+    <div class="rev-card">
+      <p class="rev-text clamped">Хочу выразить огромную благодарность Сергею Ивановичу 🙏
+Долго искала действительно профессионала своего дела — и по рекомендации наконец попала к нему.
+Уже на первой встрече в голове начали складываться все пазлы, многое стало понятным и логичным.
+Благодарю от души за внимательность, мудрость и профессиональный подход!</p>
+      <button class="rev-toggle" onclick="toggleRev(this)">читать ещё</button>
+      <div class="rev-person">
+        <div class="rev-avatar"><image-slot id="rev-1" shape="circle" placeholder="Фото" src="images/rev-seda.webp"></image-slot></div>
+        <div>
+          <p class="rev-name">Седа</p>
+          <a class="rev-source" href="https://yandex.ru/maps/org/akademiya_kratkosrochnoy_strategicheskoy_psikhoterapii/41116149577/reviews/?ll=37.698044%2C55.793207&utm_source=review&z=16" target="_blank" rel="noopener"><svg class="rev-source-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FC3F1D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>Яндекс Карты</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="rev-card">
+      <p class="rev-text">Мне понравилось обучение в этой академии.
+Кроме обучения получила еще и терапевтическую помощь по своим запросам. Получилось в процессе многое проработать и отпустить.
+По окончанию обучения получила удостоверение, подтверждающее окончание обучения.</p>
+      <div class="rev-person">
+        <div class="rev-avatar"><image-slot id="rev-2" shape="circle" placeholder="Фото" src="images/rev-vika.webp"></image-slot></div>
+        <div>
+          <p class="rev-name">Вика</p>
+          <a class="rev-source" href="https://2gis.ru/moscow/firm/70000001066384304/tab/reviews/review/54258894" target="_blank" rel="noopener"><svg class="rev-source-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#279D3E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>2ГИС</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="rev-card">
+      <p class="rev-text">Единственное, наверное, учебное заведение такого типа, которое помимо обучения психотерапии предлагает личную терапию в рамках курса. Всем понятно, что прежде, чем начинать лечить других, нужно разобраться в себе. Но не все в состоянии это сделать.</p>
+      <div class="rev-person">
+        <div class="rev-avatar"><image-slot id="rev-3" shape="circle" placeholder="Фото" src="images/rev-sergey.webp"></image-slot></div>
+        <div>
+          <p class="rev-name">Сергей</p>
+          <a class="rev-source" href="https://2gis.ru/moscow/firm/70000001066384304/tab/reviews/review/54258894" target="_blank" rel="noopener"><svg class="rev-source-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#279D3E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>2ГИС</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="rev-card">
+      <p class="rev-text clamped">Всем доброго времени суток! Обратился в компанию по личным вопросам, увидел Сергея Ивановича и его подход на Ютуб канале. Системно, всё слаженно и четко. Персонал, программы, индивидуальный подход и главное результат!
+Благодарю Сергея Ивановича и его компанию! Теперь рекомендую своим близким и родным эту компанию.</p>
+      <button class="rev-toggle" onclick="toggleRev(this)">читать ещё</button>
+      <div class="rev-person">
+        <div class="rev-avatar"><image-slot id="rev-4" shape="circle" placeholder="Фото" src="images/rev-aleksey.webp"></image-slot></div>
+        <div>
+          <p class="rev-name">Алексей</p>
+          <a class="rev-source" href="https://yandex.ru/maps/org/akademiya_kratkosrochnoy_strategicheskoy_psikhoterapii/41116149577/reviews/?ll=37.698044%2C55.793207&utm_source=review&z=16" target="_blank" rel="noopener"><svg class="rev-source-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FC3F1D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>Яндекс Карты</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="rev-card">
+      <p class="rev-text">Благодарность Масловскому Сергею Ивановичу. Глубокая терапия, четкая, поддерживающая, эффективная.
+Плюс я еще училась у него на курсе телесно-ориентированная психотерапия. Данный метод применяю и в жизни и в работе с клиентами.</p>
+      <div class="rev-person">
+        <div class="rev-avatar"><image-slot id="rev-5" shape="circle" placeholder="Фото" src="images/rev-oksana.webp"></image-slot></div>
+        <div>
+          <p class="rev-name">Оксана</p>
+          <a class="rev-source" href="https://yandex.ru/maps/org/akademiya_kratkosrochnoy_strategicheskoy_psikhoterapii/41116149577/reviews/?ll=37.698044%2C55.793207&utm_source=review&z=16" target="_blank" rel="noopener"><svg class="rev-source-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FC3F1D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>Яндекс Карты</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="rev-card">
+      <p class="rev-text clamped">Закончила курс по EMDR (ДПДГ), шла по рекомендации. Очень понравился уникальный подход Сергея Ивановича Масловского. Успешно применяю метод с клиентами и в качестве самопомощи. Потрясающие результаты, о чем говорит обратная связь от клиентов и повторные обращения уже с другими запросами. Метод позволяет быстрее прийти к желаемым результатам. Сергей Иванович дает много дополнительной полезной информации, позволяющей посмотреть многогранно на уровне тела, души на запрос клиента! Всем рекомендую!!!</p>
+      <button class="rev-toggle" onclick="toggleRev(this)">читать ещё</button>
+      <div class="rev-person">
+        <div class="rev-avatar"><image-slot id="rev-6" shape="circle" placeholder="Фото" src="images/rev-viktoriya.webp"></image-slot></div>
+        <div>
+          <p class="rev-name">Виктория</p>
+          <a class="rev-source" href="https://yandex.ru/maps/org/akademiya_kratkosrochnoy_strategicheskoy_psikhoterapii/41116149577/reviews/?ll=37.698044%2C55.793207&utm_source=review&z=16" target="_blank" rel="noopener"><svg class="rev-source-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FC3F1D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>Яндекс Карты</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Экран 5: Ответы на вопросы ===== -->
+<section class="section" data-screen-label="06 FAQ">
+  <div class="sec-head">
+    <span class="eyebrow">FAQ</span>
+    <h2>Ответы на вопросы</h2>
+  </div>
+
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" aria-controls="faqA1" onclick="toggleFaq(this)">
+        Какое нужно иметь образование, чтобы получить диплом психолога?
+        <span class="faq-icon"></span>
+      </button>
+      <div class="faq-a" id="faqA1"><p>Высшее образование (бакалавриат, специалитет, магистратура), среднее профессиональное образование, можно быть студентом техникума, колледжа или вуза.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" aria-controls="faqA2" onclick="toggleFaq(this)">
+        Можно ли научиться психологии дистанционно?
+        <span class="faq-icon"></span>
+      </button>
+      <div class="faq-a" id="faqA2"><p>Группы на потоках синхронные: очный и дистанционный формат проходит совместно. На платформе GetCourse в личном кабинете студент, обучающийся дистанционно, открывает ссылку и подключается к живой лекции или практике с преподавателем и одногруппниками очной формы обучения.<br><br>Занятия мы записываем только для участников группы. Если студент не может вовремя быть на лекции, он может пересмотреть запись на этой же платформе. Доступ к записям сохраняется на время обучения.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" aria-controls="faqA3" onclick="toggleFaq(this)">
+        Что такое профессиональная переподготовка?
+        <span class="faq-icon"></span>
+      </button>
+      <div class="faq-a" id="faqA3"><p>Профессиональная переподготовка относится к дополнительному профессиональному образованию. Но в отличие от повышения квалификации, программа профессиональной переподготовки (Ст. 76.5 Закона об образовании) направлена на получение компетенции, необходимой для выполнения нового вида профессиональной деятельности, приобретение новой квалификации. Соответственно, программа профессиональной переподготовки содержит описание вновь полученных компетенций, характеристику новой квалификации, видов деятельности или трудовых функций. Объём программ профессиональной переподготовки начинается от 250 часов. В нашей Академии объём программы профессиональной переподготовки — 724 академических часа.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" aria-controls="faqA4" onclick="toggleFaq(this)">
+        Чем отличается психолог от психотерапевта?
+        <span class="faq-icon"></span>
+      </button>
+      <div class="faq-a" id="faqA4"><p>Практический психолог и психотерапевт занимаются аналогичными проблемами. Но в отличие от психотерапевта, психолог не может назначать медикаментозную терапию.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" aria-controls="faqA5" onclick="toggleFaq(this)">
+        Что нужно для зачисления?
+        <span class="faq-icon"></span>
+      </button>
+      <div class="faq-a" id="faqA5">
+        <p>Для оформления договора и выдачи диплома необходимы следующие документы:</p>
+        <ul class="faq-doc-list">
+          <li>копия паспорта (первый разворот и прописка)</li>
+          <li>копия документа, подтверждающего средне-специальное или высшее образование</li>
+          <li>СНИЛС</li>
+          <li>свидетельство о браке (в случае смены фамилии)</li>
+          <li>адрес электронной почты</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Экран 7: Форма заявки ===== -->
+<div class="lead-wrap" id="lead" data-screen-label="07 Форма">
+  <div class="lead-box">
+    <h2>Остались вопросы?</h2>
+    <p class="sec-sub">Оставьте контакты — мы ответим на вопросы и поможем определиться с обучением</p>
+    <form class="lead-form" onsubmit="event.preventDefault();">
+      <input type="text" placeholder="Ваше имя" aria-label="Ваше имя" required>
+      <input type="email" placeholder="Ваш email" aria-label="Ваш email" required>
+      <div class="lead-phone">
+        <select aria-label="Код страны">
+          <option>🇷🇺 +7</option>
+        </select>
+        <input type="tel" placeholder="(000) 000-00-00" aria-label="Ваш телефон" required>
+      </div>
+      <button class="lead-submit" type="submit">Отправить</button>
+    </form>
+    <label class="lead-consent">
+      <input type="checkbox" required>
+      Я соглашаюсь с <a href="#">Политикой обработки персональных данных.</a>
+    </label>
+  </div>
+</div>
+
+<!-- ===== Футер ===== -->
+<footer data-screen-label="08 Футер">
+  <div class="footer-grid">
+    <div class="footer-left">
+      <div class="footer-logo">
+        <img src="images/logo.png" alt="Академия краткосрочной стратегической психотерапии">
+      </div>
+      <div class="footer-map">
+        <iframe src="https://yandex.ru/map-widget/v1/?ll=37.698044%2C55.793207&z=16&pt=37.698044,55.793207,pm2rdm" width="100%" height="100%" frameborder="0" style="border:0" loading="lazy" title="Карта проезда"></iframe>
+      </div>
+    </div>
+
+    <div class="footer-panel">
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Контактная информация</h4>
+          <p class="fc-text">Ул. Матросская Тишина, 23, строение 1, подъезд 9, оф. 1, эт. 1</p>
+          <div class="fc-metro">
+            <span class="fc-metro-badge">M</span>
+            <span>Сокольники, Митьково, Электрозаводская</span>
+          </div>
+          <p class="fc-text">С 10:00 до 20:00 МСК<br>без выходных</p>
+          <a href="mailto:info@akademy-psi-ddt.ru">info@akademy-psi-ddt.ru</a>
+          <a href="tel:+74993907390">+7 (499) 390 73 90</a>
+          <a href="tel:+79165850505">+7 (916) 585 05 05</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Мы в соцсетях</h4>
+          <a href="#">Telegram</a>
+          <a href="#">Max</a>
+          <a href="#">Вконтакте</a>
+          <a href="#">YouTube</a>
+          <a href="#">Rutube</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          ООО «АКСП» © 2026<br>
+          Образовательная лицензия №ЛО-35-01298-77/00286109 от 18.05.22
+        </div>
+        <div>
+          <a href="#">Проверить лицензию</a>
+          <a href="#">Договор оферты</a>
+          <a href="#">Реквизиты</a>
+        </div>
+        <div>
+          <a href="#">Сведения об образовательной организации</a>
+          <a href="#">Политика обработки персональных данных</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="image-slot.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
